@@ -49,12 +49,18 @@ return require('packer').startup(function()
   use 'ap/vim-css-color'
 
   -- autocomplete
+  use {
+  'hrsh7th/nvim-cmp',
+      config = function() require('config.cmp') end,
+    }
+  use { 'saadparwaiz1/cmp_luasnip' }
+  use {
+      'L3MON4D3/LuaSnip',
+      after = 'nvim-cmp',
+      config = function() require('config.snippets') end,
+  }
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/nvim-cmp'
-  -- use 'hrsh7th/vim-vsnip'
-  -- use 'hrsh7th/vim-vsnip-integ'
-  use 'L3MON4D3/LuaSnip'
 
   -- themes
   use 'sainnhe/everforest'
