@@ -1,0 +1,21 @@
+theme = "tokyonight"
+
+[editor]
+line-number = "relative"
+cursorline = true
+color-modes = true
+auto-save = true
+bufferline = "multiple"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.lsp]
+display-signature-help-docs = false
+display-inlay-hints = true
+
+[keys.normal]
+C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
