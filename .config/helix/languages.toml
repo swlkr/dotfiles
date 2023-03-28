@@ -1,0 +1,12 @@
+use-grammars = { only = [ "rust", "html", "css", "javascript", "typescript", "toml", "sql", "dockerfile", "python" ] }
+
+[[language]]
+name = "rust"
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'
