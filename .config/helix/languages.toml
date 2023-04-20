@@ -3,6 +3,10 @@ use-grammars = { only = [ "rust", "html", "css", "javascript", "typescript", "to
 [[language]]
 name = "rust"
 
+[language.config]
+cargo = { buildScripts = { enable = true }, features = "all" }
+procMacro = { enable = true }
+
 [language.auto-pairs]
 '(' = ')'
 '{' = '}'
