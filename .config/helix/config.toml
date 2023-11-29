@@ -6,6 +6,8 @@ cursorline = true
 color-modes = true
 auto-save = true
 bufferline = "multiple"
+soft-wrap = { enable = true }
+idle-timeout = 0
 
 [editor.cursor-shape]
 insert = "bar"
@@ -13,9 +15,14 @@ normal = "block"
 select = "underline"
 
 [editor.lsp]
-display-signature-help-docs = false
+display-signature-help-docs = true
 display-inlay-hints = true
+inline-diagnostics = { max-warp = 1 }
+
+[editor.statusline]
+right = ["version-control", "diagnostics", "selections", "position", "file-encoding"]
 
 [keys.normal]
 C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+esc = ["collapse_selection", "keep_primary_selection"]
